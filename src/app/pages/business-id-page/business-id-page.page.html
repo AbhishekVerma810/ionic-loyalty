@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div class="main_Container">
+   <div class="left_Design">
+      <p>Enter Business Id</p>
+      <form (ngSubmit)="submitBusinessId()">
+        <ion-input type="text" placeholder="Enter Business Id" [(ngModel)]="businessId" name="businessId"></ion-input>
+        <ion-button expand="full" type="submit" shape="round">Submit</ion-button>
+      </form>
+    </div>
+  </div>
+</ion-content>

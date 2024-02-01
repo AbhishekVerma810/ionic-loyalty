@@ -1,0 +1,87 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div class="main_Container">
+    <div class="right_Design"></div>
+    <!-- <div class="wellcome_design">
+      <p>Welcome to</p>
+      <div>
+        <ion-img  class="app_logo" src="../../../assets/images/Ellipse 20.svg"></ion-img>
+      </div>
+       <h4>Business Name</h4>
+       <h5>Earn Rewards With Every Purchase</h5> 
+       <div class="social_media">
+        <div class="icons_instagram">
+          <img class="icons" src="../../../assets/images/skill-icons_instagram.svg">
+          <p>loyaltyapp</p>
+        </div>
+        <div class="icons_instagram">
+          <img class="icons" src="../../../assets/images/logos_facebook.svg">
+          <p>loyaltyapp</p>
+        </div>
+      </div>
+    </div> -->
+    <div class="wellcome_design">
+      <p>Welcome to</p>
+      <div style="--border-radius: 50%;"><ion-img class="app_logo" [src]="businessData.data.logo"></ion-img></div>
+      <h4>{{businessData.data.business_name}}</h4>
+      <h5>Earn Rewards With Every Purchase</h5>
+      <div class="social_media">
+        <a style="text-decoration: none;" href="{{businessData.data.instagram_handle}}">
+          <div class="icons_instagram">
+            <img class="icons" src="../../../assets/images/skill-icons_instagram.svg">
+            <p>loyaltyapp</p>
+          </div>
+        </a>
+        <a style="text-decoration: none;" href="{{businessData.data.facebook_handle}}">
+          <div class="icons_instagram">
+            <img class="icons" src="../../../assets/images/logos_facebook.svg">
+            <p>loyaltyapp</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="left_Design">
+      <div class="Reward_image">
+        <ion-img src="../../../assets/images/arc_rewards_white 1.svg"></ion-img>
+      </div>
+      <p class="brand_name">Become An Brand Name Loyalty Member</p>
+    <form (ngSubmit)="onSubmit()">
+  <div class="form">
+    <p class="input_label">Full Name</p>
+    <ion-item>
+      <ion-input [(ngModel)]="name" name="name" placeholder="Your Name"></ion-input>
+    </ion-item>
+    <p class="input_label" style="margin-top: 3rem;">Date of Birth</p>
+    <ion-item lines="none">
+      <ion-input type="date" placeholder="dd / mm / yyyy" [(ngModel)]="date" name="date" ></ion-input>
+    </ion-item>
+    <!-- <ion-item>
+      <ion-input
+        [(ngModel)]="date"
+        name="date"
+        placeholder="dd / mm / yyyy"
+        value="{{ date | date: 'dd.MM.yyyy' }}"
+        id="date">
+        <ion-img src="../../../assets/images/uim_calender.svg"></ion-img>
+      </ion-input>
+      <ion-popover trigger="date" size="cover">
+        <ng-template>
+          <ion-datetime
+            presentation="date"
+            [(ngModel)]="date"
+            name="date"
+            locale="sl-SI"
+          ></ion-datetime>
+        </ng-template>
+      </ion-popover>
+    </ion-item> -->
+    <ion-button shape="round" expand="full" type="submit">Join Now & Start Earning!</ion-button>
+  </div>
+</form>
+  </div>
+  </div>
+</ion-content>

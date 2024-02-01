@@ -1,0 +1,76 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div class="main_Container">
+    <div class="right_Design"></div>
+    <div class="wellcome_design">
+      <p>Welcome to</p>
+      <div style="--border-radius: 50%;"><ion-img class="app_logo" [src]="businessData.data.logo"></ion-img></div>
+      <h4>{{businessData.data.business_name}}</h4>
+      <h5>Earn Rewards With Every Purchase</h5>
+      <div class="social_media">
+        <a style="text-decoration: none;" href="{{businessData.data.instagram_handle}}">
+          <div class="icons_instagram">
+          <img class="icons" src="../../../assets/images/skill-icons_instagram.svg">
+            <p>loyaltyapp</p>
+         </div>
+        </a>
+        <a style="text-decoration: none;" href="{{businessData.data.facebook_handle}}">
+        <div class="icons_instagram">
+           <img class="icons" src="../../../assets/images/logos_facebook.svg">
+          <p>loyaltyapp</p>
+        </div>
+      </a>
+      </div>
+    </div>
+    <div class="left_Design">
+      <div class="Reward_image">
+        <ion-img src="../../../assets/images/arc_rewards_white 1.svg"></ion-img>
+      </div>
+      <p>Enter Your Contact Number</p>
+      <ion-input type="text" [(ngModel)]="number"></ion-input>
+      <div class="divider"> </div>
+      <div class="keyboard">
+        <div id="keyboard_number" (click)="addToBusinessId(1)">
+          <p>1</p>
+        </div>
+        <div id="keyboard_number" (click)="addToBusinessId(2)">
+          <p>2</p>
+        </div>
+        <div id="keyboard_number" (click)="addToBusinessId(3)">
+          <p>3</p>
+        </div>
+        <div id="keyboard_number" (click)="addToBusinessId(4)">
+          <p>4</p>
+        </div>
+        <div id="keyboard_number" (click)="addToBusinessId(5)">
+          <p>5</p>
+        </div>
+        <div id="keyboard_number" (click)="addToBusinessId(6)">
+          <p>6</p>
+        </div>
+        <div id="keyboard_number" (click)="addToBusinessId(7)">
+          <p>7</p>
+        </div>
+        <div id="keyboard_number" (click)="addToBusinessId(8)">
+          <p>8</p>
+        </div>
+        <div id="keyboard_number" (click)="addToBusinessId(9)">
+          <p>9</p>
+        </div>
+        <div id="keyboard_number" (click)="removeLastDigit()"><img class="keyboard_image"
+            src="../../../assets/images/material-symbols-light_backspace.svg"></div>
+        <div id="keyboard_number" (click)="addToBusinessId(0)">
+          <p>0</p>
+        </div>
+        <div id="keyboard_number" (click)="submit()"><img class="keyboard_image"
+            src="../../../assets/images/mingcute_check-fill.svg"></div>
+      </div>
+      <p class="buttom_text">By providing your number, you agree to receive automated texts about our loyalty program.
+        Opt-out anytime.</p>
+    </div>
+  </div>
+</ion-content>

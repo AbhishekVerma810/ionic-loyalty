@@ -1,0 +1,346 @@
+ion-header {
+  display: none;
+}
+
+ion-content {
+  --background: #F1FAFB;
+
+  ion-img {
+    width: 304px;
+    height: 71px;
+    margin: 40px 60px 0 60px;
+  }
+
+  .top_text {
+
+    border-radius: 10px;
+    background: #FFF;
+    margin: 17px auto;
+    margin-left: 5%;
+    margin-right: 5%;
+
+    p {
+      color: #2E2E2E;
+      font-size: 20px;
+      display: inline-flex;
+      font-weight: 600;
+      margin-left: 4%;
+    }
+  }
+
+  ion-card {
+    width: 91.17%;
+    margin: auto;
+    margin-top: 30px;
+
+    ion-card-header {
+
+      border-radius: 10px 10px 0 0;
+      background: linear-gradient(0deg,var(--secondary-color), var(--primary-color) 100%);
+
+      .div {
+        .card_div {
+          display: flex;
+          align-items: center;
+        }
+
+        .name {
+          color: #FFF;
+          font-size: 40px;
+          font-weight: 600;
+          text-transform: capitalize;
+        }
+
+        .visit_time {
+          height: 32px;
+          border-radius: 5px;
+          background: #FFF;
+          margin-left: 10px;
+          display: flex;
+          align-items: center;
+
+          p {
+            color: #1D1D1D;
+            font-size: 18px;
+            font-weight: 400;
+            margin-right: 10px;
+          }
+        }
+
+        .loyalty {
+          display: inline-flex;
+          align-items: center;
+          height: 5rem;
+
+          .loyalty_point {
+            color: #FFF;
+            font-size: 30px;
+            font-weight: 500;
+          }
+
+          .number_coines {
+            color: #FFF;
+            font-size: 40px;
+            font-weight: 600;
+            padding-left: 12px;
+          }
+
+          .image {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            margin: 0 10px;
+          }
+        }
+     }
+  }
+
+    ion-card-content {
+      .Points_Earned {
+        display: flex;
+        align-items: center;
+
+        ion-label {
+          color: #313131;
+          font-family: Montserrat;
+          font-size: 32px;
+          font-weight: 600;
+        }
+
+        .Earned_point_Image {
+          width: 50px;
+          height: 50px;
+          padding: 0%;
+          margin: 31px;
+        }
+
+        h3 {
+          color: #454545;
+          font-size: 50px;
+          font-weight: 600;
+        }
+      }
+
+      .Available_offer {
+        color: #313131;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      swiper-container {
+       swiper-slide {
+          display: contents;
+
+          .card-container {
+            .ion_card {
+              width: 240px;
+              height: 186px;
+              border-radius: 10px;
+              background: #F5F5F5;
+              margin-left: 30px;
+              box-shadow: 0px 0px 12px 0px rgba(29, 99, 183, 0.36);
+
+              .ion_card_header {
+                border-radius: 5px;
+                height: 37px;
+                background: linear-gradient(180deg, #FFD200 0%, #FCAA17 100%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .header_imagebackgound {
+                  background: white;
+                  border-radius: 50%;
+
+                  .header_image {
+                    width: 34px;
+                    height: 26px;
+
+                  }
+                }
+              }
+
+              .ion-card-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 28px;
+
+                .text {
+                  color: #000;
+                  font-size: 18px;
+                  font-style: normal;
+                  font-weight: 500;
+                }
+
+                .card_text {
+                  display: flex;
+                  align-items: center;
+                  padding: 12px;
+
+                  .content_image {
+                    width: 30px;
+                    height: 30px;
+                    display: table;
+                    margin: auto;
+
+                  }
+
+                  .coines {
+                    color: #454545;
+                    font-family: Montserrat;
+                    font-size: 30px;
+                    font-style: normal;
+                    font-weight: 600;
+
+                    padding-left: 10px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .rigth_arrow {
+        float: left;
+        // margin: 13% -22px 0px 0px;
+        width: 36px;
+        height: 36px;
+        z-index: 999;
+        position: absolute;
+        top: 39%;
+        left: -8px;
+      }
+
+      .left_arrow {
+        float: right;
+        width: 36px;
+        height: 36px;
+        // margin: 13% 6px 0px -15px;
+        z-index: 999;
+        position: absolute;
+        top: 45%;
+        right: 0px;
+      }
+
+      // .card-container {
+      //   display: flex;
+      //   gap: 16px;
+      //  .ion_card {
+      //     width: 230px;
+      //     height: 170px;
+      //     border-radius: 10px;
+      //     border: 1px solid #1D63B7;
+      //     background: #F5F5F5;
+      //     box-shadow: 0px 0px 12px 0px rgba(29, 99, 183, 0.36);
+
+      //     .ion_card_header {
+      //       border-radius: 5px;
+      //       height: 37px;
+      //       background: linear-gradient(180deg, #FFD200 0%, #FCAA17 100%);
+      //       display: flex;
+      //       justify-content: center;
+      //       align-items: center;
+      //       .header_imagebackgound{
+      //         background: white;
+      //         border-radius: 50%;
+      //         .header_image {
+      //           width: 34px;
+      //           height: 26px;
+
+      //         }
+      //       }
+
+      //     }
+
+      //     .ion-card-content {
+      //       display: flex;
+      //       flex-direction: column;
+      //       align-items: center;
+      //       justify-content: center;
+      //       padding: 28px;
+
+      //       .text {
+      //         color: #000;
+      //         font-size: 18px;
+      //         font-style: normal;
+      //         font-weight: 500;
+      //       }
+
+      //       .card_text {
+      //         display: flex;
+      //         align-items: center;
+      //         padding: 12px;
+
+      //         .content_image {
+      //           width: 30px;
+      //           height: 30px;
+      //           display: table;
+      //           margin: auto;
+
+      //         }
+
+      //         .coines {
+      //           color: #454545;
+      //           font-family: Montserrat;
+      //           font-size: 30px;
+      //           font-style: normal;
+      //           font-weight: 600;
+      //           line-height: normal;
+      //           padding-left: 10px;
+      //         }
+      //       }
+      //     }
+
+      //   }
+      // }
+
+      // .rigth_arrow {
+      //   float: left;
+      //   margin: 8.1% -22px 0px 0px;
+      //   width: 36px;
+      //   height: 36px;
+      // }
+
+      // .left_arrow {
+      //   float: right;
+      //   width: 36px;
+      //   height: 36px;
+      //   margin: 8.1% 6px 0px -15px;
+      // }
+    }
+
+  }
+
+  .redeem {
+    width: 245px;
+    height: 54px;
+    border-radius: 10px;
+    --background: linear-gradient(180deg, #FFD200 0%, #FCAA17 100%);
+    color: #292929;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: none;
+    margin: 2.2% 2% 2% 0%;
+  }
+
+  .Not_now {
+    width: 245px;
+    height: 54px;
+    width: 245px;
+    height: 54px;
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: none;
+    --background: linear-gradient(0deg,var(--secondary-color), var(--primary-color) 100%); 
+   }
+   .selectedOffer {
+    border: 4px solid #1D63B7; 
+  }
+  .elseClass {
+    border: 4px solid #ff2f00; 
+  }
+}

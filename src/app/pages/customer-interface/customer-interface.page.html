@@ -1,0 +1,66 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>customerInterface</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-img
+    src="../../../assets/images/replicate-prediction-sf2cp4dbvolgbtagxp6wgiosh4-removebg-preview 1.svg"></ion-img>
+  <div class="top_text">
+    <p>Welcome Back, <span>{{userData.data.customerDetails.name}}</span>! Your loyalty means the world to us. Keep
+      earning points with every purchase!</p>
+  </div>
+  <ion-card>
+    <ion-card-header>
+      <div class="div" style="display: flex;justify-content: space-between; height: 5rem;">
+        <div class="card_div">
+          <ion-label class="name">{{userData.data.customerDetails.name}}</ion-label>
+          <div class="visit_time">
+            <p> {{userData.data.totalVisitCount }}{{' '}}st Visit</p>
+          </div>
+        </div>
+        <div>
+          <div class="loyalty">
+            <p class="loyalty_point">Loyalty Points Balance</p>
+            <img class="image" src="../../../assets/images/sprial 1 (1).svg">
+            <p class="number_coines">{{userinfo && userinfo.customerDetails && userinfo.customerDetails.total_loyalty_point ? userinfo.customerDetails.total_loyalty_point :'0'}}</p>
+          </div>
+        </div>
+      </div>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="Points_Earned">
+        <ion-label>Points Earned This Purchase</ion-label>
+        <ion-img class="Earned_point_Image" src="../../../assets/images/sprial 1 (1).svg"></ion-img>
+        <h3>{{loyaltypoints}}</h3>
+      </div>
+      <p class="Available_offer">Available Offers For You</p>
+      <swiper-container>
+        <img class="rigth_arrow" src="../../../assets/images/rigth_arrow.svg">
+        <img class="left_arrow" src="../../../assets/images/left_arrow.svg">
+        <swiper-slide *ngFor="let i of rewardinfo">
+          <div class="card-container">
+            <ion-card class="ion_card" (click)="selectOffer(i)" [ngClass]="{'selectedOffer': selectedOffer == i.id && userinfo && userinfo.customerDetails && userinfo.customerDetails.total_loyalty_point && userinfo.customerDetails.total_loyalty_point > 0, 'elseClass': selectedOffer == i.id && userinfo.customerDetails && userinfo.customerDetails.total_loyalty_point === 0 || selectedOffer == i.id && userinfo.customerDetails && i.loyalty_point > userinfo.customerDetails.total_loyalty_point}">
+              <ion-card-header class="ion_card_header">
+                <div class="header_imagebackgound">
+                  <img class="header_image"
+                    src="../../../assets/images/replicate-prediction-jh25wmtbmijuoxn6twqh2ktxbq 1.png">
+                </div>
+              </ion-card-header>
+              <ion-card-content class="ion-card-content">
+                <p class="text">{{i.title}}</p>
+                <div class="card_text">
+                  <ion-img class="content_image" src="../../../assets/images/sprial 1 (1).svg"></ion-img>
+                  <p class="coines">{{i.loyalty_point}}</p>
+                </div>
+              </ion-card-content>
+            </ion-card>
+          </div>
+        </swiper-slide>
+      </swiper-container>
+      <ion-button class="redeem" (click)="redeemRewardFun()">Redeem</ion-button>
+      <!-- <ion-button class="redeem" (click)="redeemRewardFun()" [routerLink]="['/transaction-end']">Redeem</ion-button> -->
+      <ion-button class="Not_now" (click)="NotNowFun()">Not Now</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

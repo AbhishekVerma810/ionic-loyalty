@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>codeScreen</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" style="overflow: hidden;" scrollEvents="false">
+     <div class="main_Container">
+      <div style="--border-radius: 50%;"><ion-img [src]="businessDataObject.data.logo"></ion-img></div>
+          <h2>{{businessDataObject.data.business_name}}</h2>
+          <p>Use this code to connect</p>
+          <div class="code_item" *ngIf="connectionStatus"><p>
+            {{randomNumbers[0]}}-{{randomNumbers[1]}}-{{randomNumbers[2]}}-{{randomNumbers[3]}}</p>
+          </div>
+          <div class="code_item" *ngIf="!connectionStatus"><p>
+            Loading..</p>
+          </div>
+       </div>
+</ion-content>
